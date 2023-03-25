@@ -7,7 +7,8 @@ import Signup from "./Components/Signup";
 import Movie from "./Components/Movie";
 import Search from "./Components/Search";
 import AddNewMovie from "./Components/AddNewMovie";
-export const BackendConnectionURL = "http://localhost:8080";
+// export const BackendConnectionURL = "http://localhost:8080";
+export const BackendConnectionURL = "https://movie-bot-06u4.onrender.com/";
 function App() {
   return (
     <>
