@@ -172,7 +172,7 @@ function AddNewMovie() {
             </label>
             <input
               type="file"
-              accept=".mov,.mp4,mkv,.avi,.webm,*"
+              accept=".mov,.mp4,.mkv,.avi,.webm,*"
               class="form-control"
               onChange={(e) => {
                 let file = e.target.files[0];
