@@ -1,0 +1,70 @@
+body {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  background: #1d1d1d;
+}
+
+.home-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.add-movie-from {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contain-new {
+  width: 80%;
+  height: 100vh;
+  padding: 10%;
+  margin: 10%;
+  border: 1px solid whitesmoke;
+  border-radius: 10%;
+  overflow: scroll;
+}
+<<<<<<< HEAD
+.card-img-top {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.carousel-img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .h-100 {
+    width: 60% !important;
+    height: 100% !important;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .h-100 {
+    width: 50% !important;
+    height: 100% !important;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    background-position: center;
+  }
+}
+=======
+
+>>>>>>> 450b9f6e4dc443cfd60eb6e61902bb8988ce55e7
