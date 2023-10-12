@@ -7,8 +7,9 @@ import Signup from "./Components/Signup";
 import Movie from "./Components/Movie";
 import Search from "./Components/Search";
 import AddNewMovie from "./Components/AddNewMovie";
-// export const BackendConnectionURL = "http://localhost:8080";
-export const BackendConnectionURL = "https://movie-bot-06u4.onrender.com/";
+import Genre from "./Components/Genre";
+export const BackendConnectionURL = process.env.REACT_APP_BACKEND_URL;
+// export const BackendConnectionURL = "https://movie-bot-06u4.onrender.com/";
 function App() {
   return (
     <>
@@ -17,7 +18,8 @@ function App() {
           <Route path="*" element={<Navigate to={"/home"} />} />
           <Route path="/home" element={<Home />} />
           <Route path="/downloads" element={<Login />} />
-          <Route path="/movie" element={<Movie />} />
+          <Route path="/movie/:id" element={<Movie />} />
+          <Route path="/genre/:id" element={<Genre />} />
           <Route path="/search" element={<Search />} />
           <Route path="/new" element={<AddNewMovie />} />
           <Route path="/login" element={<Login />} />

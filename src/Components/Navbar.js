@@ -7,7 +7,12 @@ function Navbar() {
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="/home">
-          <img src="bot.png" alt="Movie Bot" width="32" height="30" />
+          <img
+            src={process.env.REACT_APP_LOGO_URL}
+            alt="Movie Bot"
+            width="32"
+            height="30"
+          />
         </a>
 
         <a class="navbar-brand text-white" href="/home">

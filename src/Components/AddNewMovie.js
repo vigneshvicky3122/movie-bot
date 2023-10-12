@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { BackendConnectionURL } from "../App";
-
+const url = process.env.REACT_APP_BACKEND_URL;
 function AddNewMovie() {
   const [Name, setName] = useState("");
   const [Release, setRelease] = useState("");
@@ -12,25 +11,16 @@ function AddNewMovie() {
   const [Duration, setDuration] = useState("");
   const [Movie, setMovie] = useState("");
   const [Poster, setPoster] = useState("");
-  async function handleSubmit() {
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    let formData = new FormData();
+    formData.append("movie", Movie);
+    formData.append("name", Name);
+    console.log(formData);
     try {
-      let res = await axios.post(
-        `${BackendConnectionURL}/new-movie`,
-        {
-          Name,
-          Release,
-          Genre,
-          Description,
-          Cast,
-          Language,
-          Duration,
-          Movie,
-          Poster,
-          Time: new Date(),
-          Author: window.localStorage.getItem("name"),
-        },
-        { headers: {} }
-      );
+      let res = await axios.post(`${url}/new-movie`, formData);
       if (res.data.statusCode === 200) {
       }
       if (res.data.statusCode === 200) {
@@ -45,7 +35,11 @@ function AddNewMovie() {
   return (
     <>
       <div class="add-movie-from">
-        <div class="contain-new">
+        <form
+          class="contain-new"
+          onSubmit={handleSubmit}
+          encType="multipart/form-data"
+        >
           <div class="mb-1">
             <label
               htmlFor="exampleFormControlInput1"
@@ -193,7 +187,7 @@ function AddNewMovie() {
             </label>
             <input
               type="file"
-              accept=".png,.jpeg,.jpg,.img,*"
+              accept="image/*"
               class="form-control"
               onChange={(e) => {
                 let file = e.target.files[0];
@@ -206,14 +200,11 @@ function AddNewMovie() {
             />
           </div>
           <div class="mb-1">
-            <input
-              type="button"
-              value="Submit"
-              onClick={() => handleSubmit()}
-              class="form-control btn btn-primary"
-            />
+            <button type="submit" class="btn btn-primary">
+              Upload
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );
