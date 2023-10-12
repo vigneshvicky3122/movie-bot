@@ -26,6 +26,7 @@ body {
   border-radius: 10%;
   overflow: scroll;
 }
+<<<<<<< HEAD
 .card-img-top {
   width: 100% !important;
   height: 100% !important;
@@ -64,3 +65,6 @@ body {
     background-position: center;
   }
 }
+=======
+
+>>>>>>> 450b9f6e4dc443cfd60eb6e61902bb8988ce55e7
