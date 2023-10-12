@@ -8,8 +8,7 @@ import Movie from "./Components/Movie";
 import Search from "./Components/Search";
 import AddNewMovie from "./Components/AddNewMovie";
 import Genre from "./Components/Genre";
-export const BackendConnectionURL = process.env.REACT_APP_BACKEND_URL;
-// export const BackendConnectionURL = "https://movie-bot-06u4.onrender.com/";
+export const BackendConnectionURL = "https://movie-bot-06u4.onrender.com/";
 function App() {
   return (
     <>
